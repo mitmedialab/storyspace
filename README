@@ -1,36 +1,28 @@
 =============================================================================
 STORYSPACE
+=============================================================================
+This is a simple storytelling game built in Unity 4 / Mono for use with Storybot, a storytelling robot. 
 
-This is a simple storytelling game built in Unity3D / Mono for use with Storybot, 
-a storytelling robot. 
+The game has eight story scenes. Each scene includes a background image and three or more draggable characters. You can make up stories!
 
-The game has eight story scenes. Each scene includes a background image and 
-three or more draggable characters. You can make up stories!
-
-
-app created by Jacqueline Kory (2013-2014)
+game created by Jacqueline Kory 2013-2014
 all images created by Jacqueline Kory
 jakory@media.mit.edu
 
 =============================================================================
-NOTES
-Two different starting scenes are provided.
-'init-choice-scene' allows the user to select any story scene to play.
-'init-session-scene' takes the user to the stories for a particular SR2 or SR3 study session.
+INSTALLATION & CONFIGURATION
+=============================================================================
+I haven't tried to install or configure this project on another machine, but I expect you'd do the following:
 
-Currently everything is set up to use the session selector.
+1. Install Unity
+2. Get project
+3. Open project in Unity
 
-When switching back to using the choice scene at the start instead, one would
-change several things:
--- the behavior of the 'back' arrow (tagged with TAG_ARROW; when touched, go to
-   CheckTouch, which will leads to ReturnToBeginning, but desired behavior might
-   be in ReturnToSessionSelection, or just mod ReturnToBeginning to go to the correct
-   init scene)
--- which scene is in the build order (check init-choice, uncheck init-session)
+If someone does try to install and use this project, please update these instructions!
 
 =============================================================================
 SCENE LIST
-
+=============================================================================
 ---start&end---
 end-scene : shows 'continue' button that leads back to initial scene
 init-choice-scene : shows an array of characters, each leading to a different story scene
@@ -40,25 +32,45 @@ init-start-scene : shows 'start' button so you can advance to the first story sc
 mid-wait-scene : shows 'continue' button so you can continue to the next story scene
 
 ---storyscenes---
-note that the story numbers below reflect the order in which the scenes were created,
-not some other more important numbering schema, so they can be disregarded
+note that the story numbers below reflect the order in which the scenes were created, not some other more important numbering schema, so they can be safely ignored.
 -----------------
-story01-penguins :
-story02-aliens : usually referred to as the Mars scene
-story03-dragon : usually referred to as the Treemeadow scene
-story04-pineforest : 
-story05-dinosaur : usually referred to as the Dinoville scene
-story06-playground : 
-story07-house : 
-story08-castle : 
+story01-penguins : an iceberg scene with two penguins and a seal
+story02-aliens : a Mars/space scene with three aliens; usually referred to as the Mars scene
+story03-dragon : a meadow scene with a dragon, a bird, and a butterlfy; usually referred to as the Treemeadow scene
+story04-pineforest : a forest scene with a rabbit, a turtle, and a squirrel
+story05-dinosaur : a desert pond scene with three dinosaurs; usually referred to as the Dinoville scene
+story06-playground : a playground scene with three children
+story07-house : a living room scene with a girl, a dog, and a cat
+story08-castle : a castle scene with a prince, a princess, and a crocodile
+
+=============================================================================
+STARTING SCENES
+=============================================================================
+Two different starting scenes are provided.
+'init-choice-scene' allows the user to select any story scene to play.
+'init-session-scene' takes the user to the stories for a particular Storybot user study session.
+
+Currently everything is set up to use the session selector.
+
+When switching back to using the choice scene at the start instead, one would
+change several things:
+-- the behavior of the 'back' arrow (tagged with TAG_ARROW; when touched, go to CheckTouch, which will leads to ReturnToBeginning, but desired behavior might be in ReturnToSessionSelection, or just mod ReturnToBeginning to go to the correct init scene)
+-- which scene is in the build order (check init-choice, uncheck init-session)
+-- add the StoryspaceMainBehavior script to the Director in each of the story scenes
 
 =============================================================================
 PLAYBACKS
+=============================================================================
+The playback files provided in the Logs/playbacks directory accompany a set of scripted stories for each scene. These files can be played back in accompaniment with recorded audio of the stories. 
 
-The playback files provided in the Logs/playbacks directory accompany a set of 
-scripted stories for each scene. These files can be played back in accompaniment 
-with recorded audio of the stories. 
+The audio and script files for the stories currently exist in r1d1's contentroot.
 
+=============================================================================
+KNOWN ISSUES & THINGS TO FIX
+=============================================================================
+-- If the TCP server running elsewhere closes and restarts, the game will not try to reconnect.
+-- All TCP communication needs to be separated out from the StoryspaceMainInteraction script. Then the main interaction stuff (e.g., responses to touch/drag events) can still be attached separately to the Director in each story scene, which would allow you to play any of the story scenes as standalone scenes. At present, since the StoryspaceMainInteraction script contains more than it should, that script is attached to a persistent object from the initial session select scene, and the same script can't be present in future loaded scenes, which means story scenes are not standalone scenes ... basically, there are some issues with how the code is presently organized, and some reorganization is necessary.
+-- There are a bunch of TODOs in the code; those are all things to fix.
 
 =============================================================================
 

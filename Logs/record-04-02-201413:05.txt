@@ -1,2 +1,0 @@
-Object	Action	Position	Time
-Object	Action	Position	Time
