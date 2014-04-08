@@ -1,5 +1,19 @@
-#Folders /Library /Temp /Builds
-
-#Project/User Preference Files *.sln *.csproj *.pidb *.userprefs *.user *.suo
-
-#OS Junk Thumbs.db .DS_Store* ehthumbs.db Icon7
+# =============== #
+# Unity generated #
+# =============== #
+Temp/
+Obj/
+UnityGenerated/
+Library/
+ 
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
