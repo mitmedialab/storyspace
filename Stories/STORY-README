@@ -1,0 +1,23 @@
+There are eight scenes in the storytelling game. Two stories were written for each scene, for a total of sixteen stories. The stories were based on stories told by children (ages 3-6) during pilot testing of the storytelling game at the Boston Museum of Science Living Laboratory in early 2014.
+
+Each of these stories was manipulated to create two versions of the story – one easier, simpler version (EASY), and one harder, more complex version (HARD). You will find the EASY and HARD versions in the same text files.
+
+The dimensions manipulated were narrativity, sentence length, word frequency, syntactic simplicity, and referential cohesion. We assessed significant differences in story difficulty by comparing the EASY and HARD stories on two measures: (1) Flesch-Kincaid Grade Level (FKGL), (2) Coh-Metrix (a text-analysis software) indices of difficulty (narrativity, syntactic simplicity, word concreteness, referential cohesion, deep cohesion) [1], where higher values of the indices are generally easier to read and understand. In the future, we plan to compare subjective human ratings of the stories as well.
+
+We ensured that the FKGL were at least one grade level different (mean 2.2 grade levels different). EASY stories were grade 2.4 or below (mean 1.8); HARD stories were grade 3.2 and up (mean 4.0). Note that FKGL was intended to be a measure of reading level, not oral language difficulty, so a child who cannot read at a FKGL of 2 may be perfectly able to understand spoken speech at that level. In addition, all EASY stories were shorter (mean word count 200) than the HARD stories (mean word count 228). 
+
+We ensured that the EASY and HARD texts differed significantly on all but one of the Coh-Metrix indices (average p < 0.05), with the EASY stories having higher scores than the HARD stories on all indices except narrativity (higher for HARD – more complex stories may include more narrative structure). We purposefully varied deep cohesion scores across the stories, though we expect to find that more complex stories have higher deep cohesion scores.
+
+
+More information, such as the Coh-Metrix scores for each story and key vocabulary words targeted in the stories, is available on request (jakory@media.mit.edu). 
+
+
+REFERENCES
+[1] McNamara, D. S., Louwerse, M. M., Cai, Z. & Graesser, A. (2013). Coh-metrix version 3.0. Retrieved 10/23, 2013, from http://cohmetrix.com
+
+
+
+
+
+
+
